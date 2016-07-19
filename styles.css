@@ -14,9 +14,6 @@ html, body, div, ul, li, p {
   margin-before: 0;
   margin-after: 0; }
 
-body {
-  font-size: 62.5%; }
-
 ul, li {
   text-decoration: none;
   list-style: none;
@@ -27,50 +24,49 @@ button {
   padding: 0; }
 
 h6 {
-  font-family: Lato,sans-serif;
-  font-size: 18px;
-  font-weight: bold; }
+  font: bold 18px Lato,sans-serif; }
 
 header {
-  height: 879px;
   width: 100%;
   background: url(images/headerimage.png) no-repeat center;
+  background-size: auto;
   margin: 0 auto; }
 
 #nav {
   margin: 0 auto; }
 
 #nav .left {
-  width: 75px;
   height: 61px;
   margin-left: 13%; }
 
 #nav .right {
   float: right;
   margin-top: -20px;
-  margin-right: 12.3%; }
+  margin-right: 13%; }
   #nav .right p {
     display: inline-block;
-    font-size: 14px;
-    font-family: Lato,sans-serif;
     font-weight: bold;
-    padding: 16px 12px;
-    color: white; }
+    font-size: 14px;
+    font-family: Lato, sans-serif;
+    padding-top: 7%;
+    color: white;
+    padding-right: 11%; }
   #nav .right .signup {
-    padding-right: 39px; }
+    padding-right: 30px; }
   #nav .right #menu {
     width: 14px;
     height: 10px;
     display: inline-block; }
+  #nav .right .clearfix {
+    overflow: auto; }
 
 .center {
   text-align: center;
   margin-top: 18%;
-  color: #fff; }
+  color: #fff;
+  padding-bottom: 14.1%; }
   .center li h3 {
-    font-family: "New Times Roman",serif;
-    font-size: 36px;
-    font-style: italic;
+    font: italic 36px "Times New Roman",serif;
     margin: 0 auto; }
   .center li h1 {
     font-family: Lato, Arial, sans-serif;
@@ -79,7 +75,7 @@ header {
   .center button {
     border: 3px solid #fff;
     color: white;
-    font-family: Lato, Arial, sans-serif;
+    font-family: Lato,sans-serif;
     font-size: 18px;
     font-weight: bold;
     text-transform: uppercase;
@@ -88,21 +84,20 @@ header {
     height: 68px;
     margin: 30px 0 35px 0; }
   .center li p {
-    font-family: Lato, Arial, sans-serif;
+    font-family: Lato,sans-serif;
     font-size: 14px;
     margin: 0 auto; }
   .center u {
     font-weight: bold; }
 
 #icons {
-  height: 435px;
   text-align: center; }
   #icons ul {
     display: inline-block;
     text-align: center;
     vertical-align: middle;
-    padding: 3%;
-    margin-top: 5%; }
+    padding: 2%;
+    margin: 4.3% 0; }
   #icons ul li {
     text-align: center;
     padding: 3px; }
@@ -123,7 +118,7 @@ header {
     line-height: 25px; }
 
 #Fudiapp {
-  height: 883px;
+  width: 100%;
   background-color: #f7f7f7;
   margin: 0 auto; }
 
@@ -132,28 +127,25 @@ header {
   width: 74%; }
 
 .iphone {
+  width: 548px;
+  height: 780px;
+  background: url(images/iphone.png);
+  background-size: cover;
   display: inline-block;
   margin-top: 9%;
   vertical-align: middle; }
 
-.iphone img {
-  width: 546px;
-  height: 954px;
-  z-index: 1;
-  position: relative;
-  overflow: hidden; }
-
 .Intro {
   display: inline-block;
   vertical-align: top;
-  padding-left: 11%;
+  padding-left: 9%;
   margin-top: 15%; }
   .Intro .border {
     border-bottom: 1px solid #f26c4f;
     width: 60px;
     padding-top: 5px; }
   .Intro li p {
-    font-family: Lato, Arial, sans-serif;
+    font-family: Lato,sans-serif;
     font-size: 16px;
     font-weight: 300;
     line-height: 25px;
@@ -167,19 +159,12 @@ header {
     height: 39px; }
 
 #Quotes {
-  height: 461px;
-  position: relative;
   background: url(images/quotebackground.png) no-repeat center;
-  z-index: 2;
-  text-align: center;
-  margin-bottom: 5%; }
+  text-align: center; }
   #Quotes img {
-    width: 114px;
-    height: 114px;
     border-radius: 2px solid #958b94;
-    padding-top: 5%;
-    box-sizing: content-box; }
-  #Quotes blockquote {
+    padding-top: 5%; }
+  #Quotes aside {
     color: rgba(255, 255, 255, 0.3);
     font-family: Lato,sans-serif;
     font-size: 30px;
@@ -192,10 +177,10 @@ header {
     font-size: 18px;
     font-style: italic;
     font-weight: 100;
-    padding-top: 1%; }
+    padding-top: 1%;
+    padding-bottom: 7.6%; }
 
 .browse {
-  height: 792px;
   width: 100%;
   margin: 0 auto;
   font-size: 0; }
@@ -219,7 +204,7 @@ header {
     max-width: 20%;
     position: relative; }
   .browse li p {
-    padding-top: 28%;
+    padding-top: 23%;
     font-size: 15.37px;
     font-family: "Times New Roman",serif;
     font-style: italic; }
@@ -268,30 +253,26 @@ header {
     width: 320px;
     height: 225px; }
 
+#bottom-browse {
+  margin: 0 auto;
+  width: 83%; }
+
 .stats {
   display: inline-block;
   margin: 0 auto;
-  max-width: none;
   text-align: center;
-  padding-right: 8.9%; }
+  padding: 3.56% 5.33%; }
   .stats li {
-    max-width: none;
-    margin-top: 40%; }
+    max-width: none; }
   .stats h3 {
     color: #000; }
   .stats p {
-    font-family: Lato, sans-serif;
-    font-size: 16px;
-    font-weight: 300;
+    font: 300 16px Lato, sans-serif;
     color: #000;
     padding-top: 0; }
 
-.stats.first {
-  margin-left: 13%; }
-
 #footer {
   width: 100%;
-  height: 94px;
   border-top: 1px solid #e2e2e2;
   background-color: #f7f7f7;
   margin: 0 auto; }
@@ -302,7 +283,7 @@ header {
   margin-left: 13%;
   display: inline-block;
   vertical-align: middle;
-  padding-top: 2.5%; }
+  padding: 2.5% 0; }
 
 .website {
   color: #8b8b8b;
@@ -312,7 +293,7 @@ header {
   margin-right: 12.3%;
   display: inline-block;
   vertical-align: middle;
-  padding-top: 2.5%; }
+  padding: 2.5% 0; }
   .website span {
     color: #636363; }
 
