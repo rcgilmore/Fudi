@@ -14,7 +14,7 @@ html, body, div, ul, li, p {
   margin-before: 0;
   margin-after: 0; }
 
-ul, li {
+ul, li, a {
   text-decoration: none;
   list-style: none;
   margin: 0; }
@@ -87,8 +87,18 @@ header {
     font-family: Lato,sans-serif;
     font-size: 14px;
     margin: 0 auto; }
+  .center a {
+    text-decoration: none;
+    color: #fff; }
   .center u {
     font-weight: bold; }
+  .center u:hover {
+    color: #ccc; }
+
+button:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: 19px;
+  cursor: pointer; }
 
 #icons {
   text-align: center; }
@@ -124,13 +134,13 @@ header {
 
 .container {
   margin: 0 auto;
-  width: 74%; }
+  width: 78%; }
 
 .iphone {
-  width: 548px;
+  width: 44.5%;
   height: 780px;
-  background: url(images/iphone.png);
-  background-size: cover;
+  background: url(images/iphone.png) no-repeat left center;
+  background-size: 548px 780px;
   display: inline-block;
   margin-top: 9%;
   vertical-align: middle; }
@@ -139,7 +149,7 @@ header {
   display: inline-block;
   vertical-align: top;
   padding-left: 9%;
-  margin-top: 15%; }
+  margin-top: 15.3%; }
   .Intro .border {
     border-bottom: 1px solid #f26c4f;
     width: 60px;
@@ -158,20 +168,48 @@ header {
     width: 112px;
     height: 39px; }
 
-#Quotes {
+#Testimonials {
   background: url(images/quotebackground.png) no-repeat center;
-  text-align: center; }
-  #Quotes img {
-    border-radius: 2px solid #958b94;
-    padding-top: 5%; }
-  #Quotes aside {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 28.8125%;
+  text-align: center;
+  min-height: 461px; }
+
+.dots {
+  position: absolute;
+  bottom: 15%;
+  margin-left: 50%;
+  z-index: 20;
+  cursor: pointer; }
+
+#slides {
+  width: 301vw;
+  position: absolute;
+  overflow: hidden;
+  -webkit-transition: left 1s;
+  z-index: 10;
+  left: 0vw; }
+  #slides li {
+    display: inline-block;
+    width: 100vw;
+    text-align: center;
+    padding-top: 1.5%; }
+  #slides .headshot {
+    width: 114px;
+    height: 114px;
+    border: 4px solid #958b94;
+    border-radius: 50%;
+    box-sizing: content-box; }
+  #slides .quote {
     color: rgba(255, 255, 255, 0.3);
     font-family: Lato,sans-serif;
     font-size: 30px;
     font-weight: 100;
     padding-top: 1%;
     line-height: 45px; }
-  #Quotes p.name {
+  #slides p.name {
     color: rgba(255, 255, 255, 0.3);
     font-family: Lato, sans-serif;
     font-size: 18px;
@@ -180,93 +218,103 @@ header {
     padding-top: 1%;
     padding-bottom: 7.6%; }
 
-.browse {
+.active {
+  background-color: #fff;
+  border-radius: 50%; }
+
+#browse {
   width: 100%;
   margin: 0 auto;
   font-size: 0; }
-  .browse h6 {
+  #browse h6 {
     text-align: center;
     font-weight: normal;
     margin-top: 5%; }
-  .browse .border {
+  #browse .border {
     border-bottom: 1px solid #f26c4f;
     width: 75px;
     text-align: center;
     margin: 0 auto;
     padding-top: 3px; }
-  .browse .cuisines {
-    margin: 0;
-    margin-top: 3%; }
-  .browse li {
+
+.cuisines {
+  margin: 0;
+  margin-top: 3%; }
+  .cuisines li {
     text-align: center;
     color: #fff;
     display: inline-block;
     max-width: 20%;
     position: relative; }
-  .browse li p {
+  .cuisines li p {
     padding-top: 23%;
     font-size: 15.37px;
     font-family: "Times New Roman",serif;
     font-style: italic; }
-  .browse li h3 {
+  .cuisines li h3 {
     font-size: 36px;
     font-family: Lato,sans-serif;
     font-weight: bold; }
-  .browse .italian {
+  .cuisines a {
+    color: #fff; }
+  .cuisines .italian {
     background: url(images/italian.png) no-repeat;
     width: 320px;
     height: 225px; }
-  .browse .indian {
+  .cuisines .indian {
     background: url(images/indian.png) no-repeat;
     width: 320px;
     height: 225px; }
-  .browse .french {
+  .cuisines .french {
     background: url(images/french.png) no-repeat;
     width: 320px;
     height: 225px; }
-  .browse .steakhouse {
+  .cuisines .steakhouse {
     background: url(images/steakhouse.png) no-repeat;
     width: 320px;
     height: 225px; }
-  .browse .seafood {
+  .cuisines .seafood {
     background: url(images/seafood.png) no-repeat;
     width: 320px;
     height: 225px; }
-  .browse .sushi {
+  .cuisines .sushi {
     background: url(images/sushi.png) no-repeat;
     width: 320px;
     height: 225px; }
-  .browse .mexican {
+  .cuisines .mexican {
     background: url(images/mexican.png) no-repeat;
     width: 320px;
     height: 225px; }
-  .browse .chinese {
+  .cuisines .chinese {
     background: url(images/chinese.png) no-repeat;
     width: 320px;
     height: 225px; }
-  .browse .pizza {
+  .cuisines .pizza {
     background: url(images/pizza.png) no-repeat;
     width: 320px;
     height: 225px; }
-  .browse .american {
+  .cuisines .american {
     background: url(images/american.png) no-repeat;
     width: 320px;
     height: 225px; }
 
 #bottom-browse {
   margin: 0 auto;
-  width: 83%; }
-
-.stats {
-  display: inline-block;
-  margin: 0 auto;
-  text-align: center;
-  padding: 3.56% 5.33%; }
-  .stats li {
-    max-width: none; }
-  .stats h3 {
+  width: 84%;
+  text-align: center; }
+  #bottom-browse .stats {
+    display: inline-block;
+    margin: 0 auto;
+    text-align: center;
+    padding: 3.56% 5.33%; }
+  #bottom-browse li {
+    width: 10%; }
+  #bottom-browse h3 {
+    font-size: 36px;
+    font-family: Lato,sans-serif;
+    font-weight: bold;
     color: #000; }
-  .stats p {
+  #bottom-browse p {
     font: 300 16px Lato, sans-serif;
     color: #000;
     padding-top: 0; }
@@ -296,5 +344,27 @@ header {
   padding: 2.5% 0; }
   .website span {
     color: #636363; }
+
+@media screen and (max-width: 1024px) {
+  .Intro {
+    margin-top: 6.3%; }
+
+  .cuisines li h3 {
+    font-size: 25px; }
+
+  .cuisines li p {
+    padding-top: 36%; } }
+@media screen and (max-width: 780px) {
+  #browse {
+    width: 83%; }
+
+  .cuisines li h3 {
+    font-size: 30px; }
+
+  .cuisines li p {
+    padding-top: 23%; }
+
+  .cuisines li {
+    max-width: 50%; } }
 
 /*# sourceMappingURL=styles.css.map */

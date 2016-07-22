@@ -21,16 +21,16 @@ html,body,div,ul,li,p {
   //   font-size: 62.5%; //1em=10px
   // }
 
-  ul, li {
+  ul, li, a {
     text-decoration: none;
     list-style: none;
     margin: 0;
   }
 
- button {
+  button {
    margin: 0;
    padding:0;
- }
+  }
 
  h6 {
    font: bold 18px Lato,sans-serif;
@@ -110,9 +110,22 @@ html,body,div,ul,li,p {
       font-size: 14px;
       margin: 0 auto;
     }
+    a {
+      text-decoration: none;
+      color: #fff;
+    }
     u {
       font-weight: bold;
     }
+    u:hover{
+      color: #ccc;
+    }
+  }
+
+  button:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 19px;
+    cursor: pointer;
   }
 
   #icons {
@@ -145,7 +158,6 @@ html,body,div,ul,li,p {
       font-weight: 300;
       padding-top: 10px;
       line-height: 25px;
-
     }
   }
 
@@ -160,25 +172,26 @@ html,body,div,ul,li,p {
 
   .container {
     margin: 0 auto;
-    width: 74%;
+    width: 78%;
   }
 
   .iphone {
-    width: 548px;
+    width: 44.5%; //44.5%
     height: 780px;
-    background: url(images/iphone.png);
-    background-size:cover;
+    background: url(images/iphone.png) no-repeat left center;
+    background-size:548px 780px;
     display: inline-block;
     margin-top: 9%;
     vertical-align: middle;
   }
 
 
+
   .Intro {
     display: inline-block;
     vertical-align:top;
     padding-left: 9%;
-    margin-top: 15%;
+    margin-top: 15.3%;
     .border {
       border-bottom: 1px solid #f26c4f;
       width: 60px;
@@ -202,36 +215,70 @@ html,body,div,ul,li,p {
     }
   }
 
-  #Quotes {
+  #Testimonials {
     background: url(images/quotebackground.png) no-repeat center;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 28.8125%; //height/width=bottom padding 28? 55
     text-align: center;
-    img {
-      // width: 114px;
-      // height: 114px;
-      border-radius: 2px solid #958b94;
-      padding-top: 5%;
-      // box-sizing: content-box; //problem?
-    }
-    aside {
-      color: rgba(255,255,255,0.3);
-      font-family:Lato,sans-serif;
-      font-size: 30px;
-      font-weight: 100;
-      padding-top: 1%;
-      line-height: 45px;
-    }
-    p.name {
-      color: rgba(255,255,255,0.3);
-      font-family:Lato, sans-serif;
-      font-size: 18px;
-      font-style: italic;
-      font-weight: 100;
-      padding-top: 1%;
-      padding-bottom: 7.6%;
-    }
+    min-height: 461px;
   }
 
-  .browse {
+  .dots {
+    position: absolute;
+    bottom:15%;
+    margin-left: 50%;
+    z-index: 20;
+    cursor: pointer;
+    }
+
+
+    #slides {
+      width: 301vw;
+      position: absolute;
+      overflow: hidden;
+      -webkit-transition: left 1s;
+      z-index: 10;
+      left: 0vw;
+      li {
+      display: inline-block;
+      width: 100vw;
+      text-align: center;
+      padding-top: 1.5%;
+      }
+      .headshot {
+        width: 114px;
+        height: 114px;
+        border: 4px solid #958b94;
+        border-radius: 50%;
+        box-sizing: content-box; //problem?
+      }
+      .quote {
+        color: rgba(255,255,255,0.3);
+        font-family:Lato,sans-serif;
+        font-size: 30px;
+        font-weight: 100;
+        padding-top: 1%;
+        line-height: 45px;
+      }
+      p.name {
+        color: rgba(255,255,255,0.3);
+        font-family:Lato, sans-serif;
+        font-size: 18px;
+        font-style: italic;
+        font-weight: 100;
+        padding-top: 1%;
+        padding-bottom: 7.6%;
+      }
+    }
+
+  .active {
+    background-color:#fff;
+    border-radius: 50%;
+  }
+
+  #browse {
     width: 100%;
     margin:0 auto;
     font-size: 0;
@@ -247,96 +294,102 @@ html,body,div,ul,li,p {
       margin: 0 auto;
       padding-top:3px;
     }
+  }
+
     .cuisines {
       // display: inline;
       margin:0;
       margin-top: 3%;
-    }
-    li {
-      text-align: center;
-      color: #fff;
-      display: inline-block;
-      max-width: 20%;
-      position: relative;
+      li {
+        text-align: center;
+        color: #fff;
+        display: inline-block;
+        max-width: 20%;
+        position: relative;
       }
-    li p {
-      padding-top: 23%;
-      font-size: 15.37px;
-      font-family: "Times New Roman",serif;
-      font-style: italic;
+      li p {
+        padding-top: 23%;
+        font-size: 15.37px;
+        font-family: "Times New Roman",serif;
+        font-style: italic;
+      }
+      li h3 {
+        font-size: 36px;
+        font-family: Lato,sans-serif;
+        font-weight: bold;
+      }
+      a {
+        color: #fff;
+      }
+      .italian {
+        background: url(images/italian.png) no-repeat;
+        width: 320px;
+        height: 225px;
+      }
+      .indian {
+        background: url(images/indian.png) no-repeat;
+        width: 320px;
+        height: 225px;
+      }
+      .french {
+        background: url(images/french.png) no-repeat;
+        width: 320px;
+        height: 225px;
+      }
+      .steakhouse{
+        background: url(images/steakhouse.png) no-repeat;
+        width: 320px;
+        height: 225px;
+      }
+      .seafood {
+        background: url(images/seafood.png) no-repeat;
+        width: 320px;
+        height: 225px;
+      }
+      .sushi {
+        background: url(images/sushi.png) no-repeat;
+        width: 320px;
+        height: 225px;
+      }
+      .mexican {
+        background: url(images/mexican.png) no-repeat;
+        width: 320px;
+        height: 225px;
+      }
+      .chinese {
+        background: url(images/chinese.png) no-repeat;
+        width: 320px;
+        height: 225px;
+      }
+      .pizza{
+        background: url(images/pizza.png) no-repeat;
+        width: 320px;
+        height: 225px;
+      }
+      .american {
+        background: url(images/american.png) no-repeat;
+        width: 320px;
+        height: 225px;
+      }
     }
-    li h3 {
-      font-size: 36px;
-      font-family: Lato,sans-serif;
-      font-weight: bold;
-    }
-
-    .italian {
-      background: url(images/italian.png) no-repeat;
-      width: 320px;
-      height: 225px;
-    }
-    .indian {
-      background: url(images/indian.png) no-repeat;
-      width: 320px;
-      height: 225px;
-    }
-    .french {
-      background: url(images/french.png) no-repeat;
-      width: 320px;
-      height: 225px;
-    }
-    .steakhouse{
-      background: url(images/steakhouse.png) no-repeat;
-      width: 320px;
-      height: 225px;
-    }
-    .seafood {
-      background: url(images/seafood.png) no-repeat;
-      width: 320px;
-      height: 225px;
-    }
-    .sushi {
-      background: url(images/sushi.png) no-repeat;
-      width: 320px;
-      height: 225px;
-    }
-    .mexican {
-      background: url(images/mexican.png) no-repeat;
-      width: 320px;
-      height: 225px;
-    }
-    .chinese {
-      background: url(images/chinese.png) no-repeat;
-      width: 320px;
-      height: 225px;
-    }
-    .pizza{
-      background: url(images/pizza.png) no-repeat;
-      width: 320px;
-      height: 225px;
-    }
-    .american {
-      background: url(images/american.png) no-repeat;
-      width: 320px;
-      height: 225px;
-    }
-  }
 
     #bottom-browse {
       margin: 0 auto;
-      width: 83%;
-    }
-
-    .stats {
+      width: 84%;
+      text-align: center;
+      .stats {
       display: inline-block;
       margin:0 auto;
       text-align: center;
       padding: 3.56% 5.33%;
+      }
       li {
-        max-width: none;
+        width:10%;
       }
       h3 {
+        font-size: 36px;
+        font-family: Lato,sans-serif;
+        font-weight: bold;
         color: #000;
       }
       p {
@@ -376,8 +429,35 @@ html,body,div,ul,li,p {
       vertical-align: middle;
       padding: 2.5% 0;
       span {
-        color: #636363;
-      }
+      color: #636363;
     }
+  }
 
-  
+  @media screen and (max-width: 1024px) {
+    .Intro {
+      margin-top: 6.3%;
+    }
+    .cuisines li h3 {
+    font-size: 25px;
+    }
+    .cuisines li p {
+    padding-top: 36%;
+    }
+  }
+
+
+
+  @media screen and (max-width: 780px) {
+    #browse {
+    width: 83%;
+  }
+  .cuisines li h3 {
+  font-size: 30px;
+  }
+  .cuisines li p {
+  padding-top: 23%;
+  }
+  .cuisines li {
+    max-width: 50%;
+  }
+}
