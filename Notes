@@ -6,7 +6,7 @@ nav bar:
   menu bars:
 Find your Favorite": italic NTR 36px h3
 h1: lato bold 100px
-"Get Started" uppercase button: Lato Bold 18px
+"Get Started" uppercase button: Lato Bold 18px h6
 "OR SEND US YOUR OWN RECIPES AND <strong>GET REWARDED!<strong>(underlined)" Lato Bold/Regular 14px
 
 Height: 436px
