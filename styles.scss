@@ -54,9 +54,8 @@ html,body,div,ul,li,p {
   }
 
   #nav .right {
-    float: right;
     margin-top: -20px;
-    margin-right: 13%; //200px; 13%;
+    margin-left: 76.5%;
     p {
     display: inline-block;
     font-weight: bold;
@@ -64,14 +63,13 @@ html,body,div,ul,li,p {
     font-family:Lato, sans-serif;
     padding-top: 7%;
     color: white;
-    padding-right: 11%;
+    // padding-right: 11%;
     }
-    .signup {
-      padding-right: 30px;
+    li {
+      display: inline-block;
+      padding-right: 5%;
     }
-    #menu {
-      width: 14px;
-      height: 10px;
+    #hamburger {
       display: inline-block;
     }
     .clearfix {
@@ -456,6 +454,9 @@ html,body,div,ul,li,p {
 
 
   @media screen and (max-width: 780px) {
+    #nav .right {
+      margin-left: 65%;
+    }
     #browse {
     width: 83%;
     }
@@ -479,6 +480,21 @@ html,body,div,ul,li,p {
     }
     #bottom-browse .stats {
       display: none;
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    .center {
+      h3 {
+      font-size: 30px;
+      }
+      h1 {
+        font-size: 80px;
+      }
+      button {
+        width:220px;
+        height:60px;
+      }
     }
   }
 

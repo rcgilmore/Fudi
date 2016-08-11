@@ -40,22 +40,19 @@ header {
   margin-left: 13%; }
 
 #nav .right {
-  float: right;
   margin-top: -20px;
-  margin-right: 13%; }
+  margin-left: 76.5%; }
   #nav .right p {
     display: inline-block;
     font-weight: bold;
     font-size: 14px;
     font-family: Lato, sans-serif;
     padding-top: 7%;
-    color: white;
-    padding-right: 11%; }
-  #nav .right .signup {
-    padding-right: 30px; }
-  #nav .right #menu {
-    width: 14px;
-    height: 10px;
+    color: white; }
+  #nav .right li {
+    display: inline-block;
+    padding-right: 5%; }
+  #nav .right #hamburger {
     display: inline-block; }
   #nav .right .clearfix {
     overflow: auto; }
@@ -361,6 +358,9 @@ button:hover {
   .cuisines li p {
     padding-top: 36%; } }
 @media screen and (max-width: 780px) {
+  #nav .right {
+    margin-left: 65%; }
+
   #browse {
     width: 83%; }
 
@@ -382,6 +382,14 @@ button:hover {
 
   #bottom-browse .stats {
     display: none; } }
+@media screen and (max-width: 400px) {
+  .center h3 {
+    font-size: 30px; }
+  .center h1 {
+    font-size: 80px; }
+  .center button {
+    width: 220px;
+    height: 60px; } }
 @media screen and (max-width: 320px) {
   #nav .left {
     margin-left: 32%; }
